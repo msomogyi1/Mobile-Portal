@@ -1,0 +1,487 @@
+@charset "utf-8";
+/* CSS Document */
+/* This document applies to Login.html, Mobile-Portal.html, and My-Devices.html */
+/*##### Document-wide design elements #####*/
+* {
+	font-family: sans-serif;
+}
+body{
+	padding-top: 60px;
+	height: 100%;
+	overflow: hidden;
+}
+.container{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	overflow-y: scroll;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*##### Top of Page and Navbar Design Elements #####*/
+.header{
+	background-color: white;
+	border: none;
+	display: table;
+}
+.navbar{
+	background-color: #E5E5E5;
+}
+.navbar-brand{
+	font-size: 16px
+}
+.header-accent{
+	height: 10px;
+	width: 100%;
+	background-color:#B41601;
+}
+.title-container{
+	display: table;
+	height: 60px;
+	width: 90%;
+	max-width: 900px;
+	margin: auto;
+}
+@media only screen and (max-width: 700px){
+	.title-text{
+		font-size: 24px
+	}
+}
+@media only screen and (min-width: 0px) and (max-width: 500px){
+	.title-text{
+		font-size: 18px;
+	}
+}
+.title-text{
+	margin-bottom: 0px;
+	text-align: center;
+}
+.title-text-description {
+	text-align: center;
+}
+.intro-tile-title{
+	margin-top: 10px;
+	text-align: center;
+	color: grey;
+	font-weight: bold;
+}
+
+/*##### Accoridon Design Elements #####*/
+.panel-group .panel{
+	margin-bottom: 20px;
+}
+.panel-default .panel-heading{
+	background-color: white;
+}
+.advanced-option{
+	background-color: white;
+	border: solid grey 1px;
+	border-radius: 16px;
+	height: 35px;
+	float: left;
+	display: inline;
+	display: block;
+	width: 100%;
+	margin: auto;
+}
+.advanced-option:hover{
+	background-color: #12c2e9;
+}
+.advanced-option:active{
+	background-color: #12c2e945;
+}
+.advanced-option-title{
+	line-height: 35px;
+	text-align: center;
+	font-weight: bold;
+	
+}
+.advanced-tile-description{
+	color: grey;
+	float: left;
+	display: inline;
+	width: 200px;
+	margin-left: 20px;
+}
+.option-img{
+	height: 40px;
+	margin-right: 10px;
+}
+.option-icon {
+	font-size: 35px;
+    line-height: 40px;
+    margin-right: 10px;
+    float: left;
+}
+.option-icon-text {
+	line-height: 40px;
+}
+/*##### Footer and Bottom of Page Design Elements #####*/
+footer{
+	height: 20px;
+	padding: 0px;
+}
+#main-footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	display: block;
+}
+.footer-nav{
+	background-color: #e5e5e5;
+	height: 50px;
+}
+.footer-img{
+	display: block;
+	height: 100%;
+	padding: 5px;
+}
+.footer-accent{
+	height: 10px;
+	width: 100%;
+	background-color:#B41601;
+}
+
+/*################ Responsive Elements ################*/
+@media only screen and (min-width: 851px){
+	.wide-view-option-title{
+		font-size: 20px;
+	}
+	.advanced-tile-description-wide{
+		font-size: 14px;
+	}
+}
+@media only screen and (min-width: 751px) and (max-width: 850px){
+	.wide-view-option-title{
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 0px) and (max-width: 750px){
+	.wide-view-option-title{
+		font-size: 14px;
+	}
+	.advanced-tile-description-wide{
+		font-size: 12px;
+	}
+}
+
+@media only screen and (min-width: 651px){
+	.wide-view-option-title{
+		font-weight: bold;
+		font-size: 13px;
+	}
+}
+@media only screen and (min-width: 601px){
+	.panel-collapse{
+		display: block;
+	} 
+	.panel-heading{
+		display: none;
+	}
+	.panel-default{
+		border: none;
+		box-shadow: none;
+	}
+	.panel-body{
+		padding: 0px;
+	}
+	.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group{
+		border-top-color: white;
+	}
+	.panel-group{
+		margin: auto;
+		display: table;
+	}
+	.panel-group .panel{
+		width: 40%;
+		height: 175px;
+		padding: 0px;
+		display: inline-block;
+	}
+	.left-panel{
+		margin-left: 3%;
+		float: left;
+	}
+	.right-panel{
+		float: right;
+		margin-right: 3%;
+	}
+	.first-panel{
+		margin-top: 5px;
+	}
+	.advanced-tile-description{
+		display: none;
+	}
+	.advanced-tile-description-wide{
+		display: block;
+		width: 96%;
+		margin: 15px 2% 15px 2%;
+		font-size: 11px;
+	}
+	.wide-view-option-title{
+		height: 40px;
+	}
+}
+@media only screen and (max-width: 600px){
+	.intro-tile-title{
+		height: 35px;
+		color: black;
+		line-height: 35px;
+		border: solid 1px grey;
+		border-radius: 16px;
+		width: auto;
+	}	
+	.intro-tile-title:hover{
+		height: 35px;
+		color: black;
+		line-height: 35px;
+		border: solid 1px grey;
+		border-radius: 16px;
+		width: auto;
+	}
+	.placeholder-option, .panel-body .option-img, .wide-view-option-title, .advanced-tile-description-wide{
+		display: none;
+	}
+	.advanced-tile-description-wide{
+		display: none;
+	}
+	.advanced-tile-description{
+		display: block;
+		width: 96%;
+		margin: 2%;
+	}
+}
+@media only screen and (min-width: 1150px){
+	.advanced-tile-description-wide{
+		height: auto;
+	}
+}
+@media only screen and (min-width: 700px) and (max-width: 1150px){
+	.advanced-tile-description-wide{
+		height: 30px;
+	}
+}
+/*##### Styling for My Device #####*/
+.device-tab{
+	font-family: sans-serif;
+    height: 100px;
+    line-height: 50px;
+    border: solid grey 1px;
+    width: 80%;
+	max-width: 500px;
+    border-radius: 16px;
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+	cursor: pointer;
+}
+.device-tab:hover{
+	background-color: #12c2e9;
+}
+.device-tab:active{
+	background-color: #12c2e945;
+}
+.Apple-device img, .Android-device img, .new-device img{
+    height: 80px;
+    float: left;
+    margin: 10px;
+}
+.device-model, .new-device-text{
+	text-align: left;
+}
+.device-list-description{
+	margin: 0px 20px 0px 20px;
+    text-align: center
+}
+.modal-container {
+	display: none;
+	position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.modal-inner-container {
+	margin: auto;
+    margin-top: 20%;
+    display: none;
+    background: white;
+    border: 1px grey solid;
+    height: 275px;
+    width: 80%;
+    max-width: 400px;
+	overflow: hidden;
+}
+.modal-title{
+	background: #cccaca;
+    line-height: 30px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.modal-body{
+	margin: 10px;
+	position: relative;
+	display: none;
+	height: 175px;
+}
+#new-device-body-1, #new-device-body-2, #new-device-body-3, #new-device-body-4{
+	left: 400px;
+}
+.modal-body .android-device{
+	margin: 10px 0px 10px 10%;
+	height: 100px;
+}
+.modal-body .ios-device{
+	height: 100px;
+	margin: 10px 10% 10px 0px;
+	float: right;
+}
+.modal-body .android-device:hover, .modal-body .ios-device:hover {
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.modal-body .android-device:active, .modal-body .ios-device:active {
+	opacity: 1;
+    filter: alpha(opacity=100);
+}
+.close-modal-x{
+	float: right;
+    background: #b41601;
+    padding: 0px 10px;
+}
+.close-modal-x:hover{
+    background: #e63119;
+	cursor: pointer;
+}
+.close-modal-x:active{
+    background: #b41601;
+}
+.option-container{
+	display: block;
+    margin: auto;
+	margin-top: 15px;
+    width: 300px;
+    height: 50px;
+}
+.modal-text-option, .go-back-button, .add-device-button, .go-back-option {
+	background-color: white;
+    border: solid grey 1px;
+    width: 100px;
+    border-radius: 16px;
+    height: 35px;
+    float: left;
+	margin: 15px;
+	line-height: 35px;
+	text-align: center;
+	font-weight: bold;
+}
+#new-device-body-0 .modal-text-option, #new-device-body-1 .modal-text-option{
+	width: 170px;
+	display: block;
+	float: none;
+}
+.modal-text-option:hover, .go-back-option:hover, .add-device-button:hover{
+	background-color: #12c2e9;
+	cursor: pointer;
+}
+.modal-text-option:active, .go-back-option:active, .add-device-button:active{
+	background-color: #12c2e945;
+}
+.right-option{
+	float: right;
+}
+#loading-container {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+}
+#loading-text{
+	margin-top: 20vh;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+}
+#progressbar {
+	margin: 2% 10% 0% 10%;
+}
+.ui-progressbar-indeterminate .ui-progressbar-value {
+	background: #b41601;
+}
+.greyed-out{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #80808069;
+	z-index: -1;
+}
+.go-back-button {
+	width: 120px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left:  -60px;
+}
+
+/*##### Replace Device Modal Design Elements#####*/
+#replace-device-inner-container {
+	height: 275px;
+}
+.modal-text-option, .go-back-option {
+	width: 195px;
+	float: none;
+    margin: 15px auto;
+}
+.ui-progressbar-value{
+	background-color: red;
+}
+#progressbar {
+    width: 80%;
+    height: 25px;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+	background: #e5e5e5;
+}
+
+.ui-progressbar .ui-progressbar-value {
+    display: block;
+    height: 16px;
+    background: #b41601;
+    border-radius: 5px;
+	margin: 0px;
+    /*transition: width 250ms ease-in-out;*/
+}
+
+/*###### Login Styling ######*/
+.login-btn {
+	background-color: white;
+    border: solid grey 1px;
+    width: 175px;
+    border-radius: 16px;
+    height: 35px;
+	display: block;
+	line-height: 35px;
+	text-align: center;
+	font-weight: bold;
+	margin: 30px auto;
+}
+.login-btn:hover{
+	background-color: #12c2e9;
+	cursor: pointer;
+}
+.login-btn:active{
+	background-color: #12c2e945;
+}
