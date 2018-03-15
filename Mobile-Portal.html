@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile Portal</title>
+<link href="css/bootstrap-3.3.7.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.progressbar.min.css" rel="stylesheet" type="text/css">
+<link href="css/ionicons.css" rel="stylesheet" type="text/css">
+<link href="css/main-styling.css" rel="stylesheet" type="text/css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- Main Container -->
+<div id="main-container" class="container"> 
+	<!-- Header -->
+	<header class="header">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid"> 
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+					<a class="navbar-brand" href="./My-Devices">MOBILITY SELF-HELP PORTAL</a></div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="topFixedNavbar1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="my-devices">MY DEVICES</a></li>
+						<li><a href="device-support">GET HELP</a></li>
+						<li><a href="https://jnjprod.service-now.com/iris?id=irisgl_home" target="_blank">IRIS</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse --> 
+			</div>
+			<div class="container-fluid header-accent"></div>
+			<!-- /.container-fluid --> 
+		</nav>
+	</header>
+	<div class="title-container">
+		<h3 class="title-text">Select Management Options for Your <span id="device-name"></span></h3>
+		<hr/>
+	</div>
+	<!--
+	The section below contains a few sample device management options that we plan to include in the final version of the site. This section contains an accordion for the mobile view and a simple collection of containers for when viewing on a larger device.
+-->
+	<div class="panel-group" id="device-options" role="tablist" aria-multiselectable="true"> 
+		<!--Replace option section-->
+		<div class="panel panel-default left-panel first-panel">
+			<div class="panel-heading" data-toggle="collapse" href="#option-one">
+				<h4 class="panel-title"><a data-toggle="collapse" data-parent="#device-options" href="#option-one"><img class="option-img" src="images/replace.png" width="" height="" alt=""/>Replace with Another Device</a></h4>
+			</div>
+			<div id="option-one" class="panel-collapse collapse">
+				<div class="panel-body">
+					<div class="advanced-support-options">
+						<div class="wide-view-option-title"><img class="option-img" src="images/replace.PNG" width="" height="" alt=""/>Replace with Another Device</div>
+						<p class="advanced-tile-description-wide">Replace this device with another and securely remove all J&J data and applications.</p>
+						<input id="replace-device-button" class ="advanced-option advanced-option-title" type="button" value="Replace Device"/>
+						<p class="advanced-tile-description">Replace this device with another and securely remove all J&J data and applications.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Repair email section-->
+		<div class="panel panel-default right-panel">
+			<div class="panel-heading" data-toggle="collapse" href="#option-two">
+				<h4 class="panel-title"><a data-toggle="collapse" data-parent="#device-options" href="#option-two"><img class="option-img" src="images/Email.png" width="" height="" alt=""/>Repair Email/Calendar</a></h4>
+			</div>
+			<div id="option-two" class="panel-collapse collapse">
+				<div class="panel-body">
+					<div class="advanced-support-options">
+						<div class="wide-view-option-title"><img class="option-img" src="images/Email.png" width="" height="" alt=""/>Repair Email/Calendar</div>
+						<p class="advanced-tile-description-wide">Instantly repair issues involving email, calendar, or contact syncing.</p>
+						<input id="repair-email-button" class ="advanced-option advanced-option-title" type="button" value="Repair Email"/>
+						<p class="advanced-tile-description">Instantly repair issues involving email, calendar, or contact syncing.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Repiar wifi section-->
+		<div class="panel panel-default left-panel">
+			<div class="panel-heading" data-toggle="collapse" href="#option-three">
+				<h4 class="panel-title"><a data-toggle="collapse" data-parent="#device-options" href="#option-three">
+					<div class="option-icon ion-wifi"></div>
+					<div style="line-height: 40px">Repair J&J Wi-Fi</div>
+					</a></h4>
+			</div>
+			<div id="option-three" class="panel-collapse collapse">
+				<div class="panel-body">
+					<div class="advanced-support-options">
+						<div class="wide-view-option-title">
+							<div class="option-icon ion-wifi"></div>
+							<div style="line-height: 40px">Repair J&J Wi-Fi</div>
+						</div>
+						<p class="advanced-tile-description-wide">Instantly repair issues with connecting to JJMobility.</p>
+						<input id="repair-wifi-button" class ="advanced-option advanced-option-title" type="button" value="Repair Wi-Fi"/>
+						<p class="advanced-tile-description">Instantly repair issues with connecting to JJMobility.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Replace passcode section-->
+		<div class="panel panel-default right-panel">
+			<div class="panel-heading" data-toggle="collapse" href="#option-four">
+				<h4 class="panel-title"><a data-toggle="collapse" data-parent="#device-options" href="#option-four"><img class="option-img" src="images/Passcode.png" width="" height="" alt=""/>Replace Passcode</a></h4>
+			</div>
+			<div id="option-four" class="panel-collapse collapse">
+				<div class="panel-body">
+					<div class="advanced-support-options">
+						<div class="wide-view-option-title"><img class="option-img" src="images/Passcode.png" width="" height="" alt=""/>Replace Passcode</div>
+						<p class="advanced-tile-description-wide">Change the passcode used to unlock your device.</p>
+						<input id="replace-passcode-button" class ="advanced-option advanced-option-title" type="button" value="Change Passcode"/>
+						<p class="advanced-tile-description">Change the passcode used to unlock your device.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Remove data option section-->
+		<div class="panel panel-default left-panel">
+			<div class="panel-heading" data-toggle="collapse" href="#option-five">
+				<h4 class="panel-title"><a data-toggle="collapse" data-parent="#device-options" href="#option-five">
+					<div class="option-icon glyphicon glyphicon-remove-circle"></div>
+					<div class="option-icon-text">Remove J&J Data from Device</div>
+					</a></h4>
+			</div>
+			<div id="option-five" class="panel-collapse collapse">
+				<div class="panel-body">
+					<div class="advanced-support-options">
+						<div class="wide-view-option-title">
+							<div class="option-icon glyphicon glyphicon-remove-circle"></div>
+							<div class="option-icon-text">Remove J&J Data from Device</div>
+						</div>
+						<p class="advanced-tile-description-wide">Remove all J&J data and applications.</p>
+						<input id="remove-device-button" class ="advanced-option advanced-option-title" type="button" value="Remove J&J Data"/>
+						<p class="advanced-tile-description">Remove all J&J data and applications.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--modal for replacing the device-->
+<div id="replace-device-container" class="modal-container">
+	<div class="greyed-out"></div>
+	<div id="replace-device-inner-container" class="modal-inner-container">
+		<div class="modal-title unselectable">Add a New Device
+			<div class="close-modal-x unselectable">X</div>
+		</div>
+		<div id="replace-device-body-0" class="modal-body">
+			<div>Replacing this device with another will remove this device from J&J management. All J&J data, applications, and profiles for email and Wi-Fi will be deleted. No personal information will be removed and the device will still be usable as a personal device.</div>
+			<div id="confirm-replace-device" class="modal-text-option unselectable">Continue Replacing Device</div>
+			<div id="cancel-replace-device" class="modal-text-option unselectable">Cancel</div>
+		</div>
+	</div>
+</div>
+<!--modal confirming the device was replaced-->
+<div id="device-replaced-container" class="modal-container">
+	<div class="greyed-out"></div>
+	<div id="device-replaced-inner-container" class="modal-inner-container">
+		<div class="modal-title unselectable">Add a New Device
+			<div class="close-modal-x unselectable">X</div>
+		</div>
+		<div id="device-replaced-body" class="modal-body">
+			<div>Your device was successfully removed, you will now be redirected back to the device home page where you can add a new device.</div>
+			<div id="confirm-redirect-add" class="modal-text-option unselectable">Continue to Add Device</div>
+		</div>
+	</div>
+</div>
+<!--modal for repairing email-->
+<div id="repair-email-container" class="modal-container">
+	<div class="greyed-out"></div>
+	<div id="repair-email-inner-container" class="modal-inner-container">
+		<div class="modal-title unselectable">Repair Email
+			<div class="close-modal-x unselectable">X</div>
+		</div>
+		<div id="repair-email-body-0" class="modal-body">
+			<div>This is placeholder text for the options.</div>
+			<div id="confirm-repair-email" class="modal-text-option unselectable">Repair Email</div>
+			<div id="cancel-repair-email" class="modal-text-option unselectable">Cancel</div>
+		</div>
+	</div>
+</div>
+<!--modal confirming the email was repaired-->
+<div id="email-repaired-container" class="modal-container">
+	<div class="greyed-out"></div>
+	<div id="email-repaired-inner-container" class="modal-inner-container">
+		<div class="modal-title unselectable">Placeholder
+			<div class="close-modal-x unselectable">X</div>
+		</div>
+		<div id="email-repaired-body-0" class="modal-body">
+			<div>This is placeholder text for the options.</div>
+			<div id="confirm-email-repaired" class="modal-text-option unselectable">Close</div>
+		</div>
+	</div>
+</div>
+<!--modal for repairing wifi-->
+<div id="repair-wifi-container" class="modal-container">
+	<div class="greyed-out"></div>
+	<div id="repair-wifi-inner-container" class="modal-inner-container">
+		<div class="modal-title unselectable">Repair Wi-Fi
+			<div class="close-modal-x unselectable">X</div>
+		</div>
+		<div id="repair-wifi-body-0" class="modal-body">
+			<div>This is placeholder text for the options.</div>
+			<div id="confirm-repair-wifi" class="modal-text-option unselectable">Repair Wi-Fi</div>
+			<div id="cancel-repair-wifi" class="modal-text-option unselectable">Cancel</div>
+		</div>
+	</div>
+</div>
+<div id= "loading-container">
+	<div id="loading-text"></div>
+	<div id="progressbar"  class="bar"></div>
+</div>
+<div id="current-device" style="display: none"></div>
+<div id="device-info" style="display: none"></div>
+<footer id="main-footer">
+	<div class="footer-accent"></div>
+	<div class="footer-nav"> <img class="footer-img" src="images/jjt-logo.png" width="auto" height="auto" alt=""/> </div>
+</footer>
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="jQueryAssets/jquery.ui-1.10.4.progressbar.min.js"></script> 
+<script src="js/bootstrap-3.3.7.js"></script> 
+<script src="js/home.js"></script> 
+<script>
+	$(document).ready(function(){
+		device_information();
+	})
+</script>
+</body>
+</html>
